@@ -61,6 +61,27 @@ Flowers(int tempXpos, int tempYpos, float tempRadius, int tempNumOfPentals,int t
       ySpeed =ySpeed*-1;
     }
   }
+  
+  void useAllFunction()
+  {
+    display();
+    move();
+    bounce();
+  }
+  
+  
+  boolean overlaps(Flowers f)
+  {
+    float d = dist(xPos,yPos,f.xPos,f.yPos);
+    if (d< _radius+f._radius)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
 
 }
   
